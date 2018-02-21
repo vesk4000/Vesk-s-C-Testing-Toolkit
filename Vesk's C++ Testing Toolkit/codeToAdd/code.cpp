@@ -4,10 +4,22 @@
 #include <ctime>
 
 ///Add these global variables
-ifstream veskinput;ofstream veskoutput;ofstream vesktimes;
+ifstream veskinput;
+ofstream veskoutput;
+ofstream vesktimes;
 
 ///Add this function
-string veskaddZeros(int veskx, int veskn){stringstream veskss;veskss << veskn;string veskans = veskss.str();while(veskans.size() < veskx){veskans = '0' + veskans;}return veskans;}
+string veskaddZeros(int veskx, int veskn)
+{
+	stringstream veskss;
+	veskss << veskn;
+	string veskans = veskss.str();
+	while(veskans.size() < veskx)
+	{
+		veskans = '0' + veskans;
+	}
+	return veskans;
+}
 
 ///Add this in the beginning of your main function
 vesktimes.open("times.txt");
