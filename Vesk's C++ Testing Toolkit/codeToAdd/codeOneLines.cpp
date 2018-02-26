@@ -10,7 +10,7 @@ ifstream veskinput;ofstream veskoutput;ofstream vesktimes;
 string veskaddZeros(int veskx, int veskn){stringstream veskss;veskss << veskn;string veskans = veskss.str();while(veskans.size() < veskx){veskans = '0' + veskans;}return veskans;}
 
 ///Add this in the beginning of your main function
-vesktimes.open("times.txt");int vesknumberOfTests;cin >> vesknumberOfTests;string veskproblemName;cin >> veskproblemName;int vesknDigits;cin >> vesknDigits;for(int veski = 0;veski < vesknumberOfTests; ++veski){string vesknameinput = veskproblemName + "." + veskaddZeros(vesknDigits, veski) + ".in";veskinput.open(vesknameinput.c_str());string vesknameoutput = veskproblemName + "." + veskaddZeros(vesknDigits, veski) + ".user.sol";veskoutput.open(vesknameoutput.c_str());
+vesktimes.open("times.txt");int vesknumberOfTests;cin >> vesknumberOfTests;string veskproblemName;cin >> veskproblemName;int vesknDigits;cin >> vesknDigits;for(int veski = 1;veski <= vesknumberOfTests; ++veski){string vesknameinput = veskproblemName + "." + veskaddZeros(vesknDigits, veski) + ".in";veskinput.open(vesknameinput.c_str());string vesknameoutput = veskproblemName + "." + veskaddZeros(vesknDigits, veski) + ".user.sol";veskoutput.open(vesknameoutput.c_str());
 ///Restart the values of all of your global variables here
 clock_t begin = clock();
 
