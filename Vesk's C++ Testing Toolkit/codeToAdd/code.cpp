@@ -29,7 +29,7 @@ string veskproblemName;
 cin >> veskproblemName;
 int vesknDigits;
 cin >> vesknDigits;
-for(int veski = 0;veski < vesknumberOfTests; ++veski){
+for(int veski = 1;veski <= vesknumberOfTests; ++veski){
 string vesknameinput = veskproblemName + "." + veskaddZeros(vesknDigits, veski) + ".in";
 veskinput.open(vesknameinput.c_str());
 string vesknameoutput = veskproblemName + "." + veskaddZeros(vesknDigits, veski) + ".user.sol";
